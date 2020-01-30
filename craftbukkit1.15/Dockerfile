@@ -19,5 +19,5 @@ RUN rm *.tar.gz
 
 EXPOSE 25565
 
-CMD ping google.com -n 60 > /dev/null
-CMD java -Xms512M -Xmx512M -jar /data/*.java nogui
+#CMD ping google.com -n 60 > /dev/null
+CMD screen -dm java -Xms512M -Xmx512M -jar /data/*.java nogui
