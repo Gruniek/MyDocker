@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get install -y proftpd curl nano wget openssh-server htop slurm apt-utils screen vim
-RUN dpkg --add-architecture i386 && apt update &&  apt -y install mailutils postfix curl wget file tar bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc j$
+RUN dpkg --add-architecture i386 && apt update &&  apt -y install mailutils postfix curl wget file tar bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils
 
 RUN rm -rf /var/lib/apt/lists/*
 
