@@ -1,3 +1,5 @@
+#docker build -t foo . && docker run -it foo
+
 FROM debian:latest
 
 RUN apt-get -y update && apt-get -y upgrade
