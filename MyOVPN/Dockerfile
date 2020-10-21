@@ -11,9 +11,9 @@ WORKDIR /data
 RUN wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
 RUN chmod 777 openvpn-install.sh
 RUN cd /dev
-RUN mkdir net
-RUN mknod net/tun c 10 200
-RUN chmod 0666 net/tun
+RUN mkdir /dev/net
+RUN mknod /dev/net/tun c 10 200
+RUN chmod 0666 /dev/net/tun
 RUN ./openvpn-install.sh
 EXPOSE 1194
 
