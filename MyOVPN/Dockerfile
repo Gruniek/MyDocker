@@ -14,6 +14,7 @@ RUN cd /dev
 RUN mkdir net
 RUN mknod net/tun c 10 200
 RUN chmod 0666 net/tun
+RUN ./openvpn-install.sh
 EXPOSE 1194
 
 CMD ping google.com -n 60 > /dev/null
