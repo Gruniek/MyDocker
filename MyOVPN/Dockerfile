@@ -12,7 +12,6 @@ RUN wget https://raw.githubusercontent.com/angristan/openvpn-install/master/open
 RUN chmod 777 openvpn-install.sh
 RUN cd /dev && mkdir net && mknod net/tun c 10 200 && chmod 0666 net/tun
 
-RUN ./openvpn-install.sh
 EXPOSE 1194
 
 CMD ping google.com -n 60 > /dev/null
